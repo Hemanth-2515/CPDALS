@@ -2,14 +2,6 @@
 
 A rebuilt full-stack learning platform using React, Express, JWT authentication, and MongoDB.
 
-## What changed
-
-- Removed the Base44-specific app shell.
-- Added login and registration before entering the app.
-- Added a standalone Express API instead of relying on Base44 APIs.
-- Added MongoDB models for users, content, progress, sessions, cognitive profiles, and gamification.
-- Added seeded starter content so the dashboard works immediately after signup.
-
 ## Tech stack
 
 - Frontend: React + Vite
