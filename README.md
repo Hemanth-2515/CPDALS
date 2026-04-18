@@ -98,4 +98,3 @@ npm run build
 
 - The app seeds sample learning content automatically on first run.
 - Login is required before accessing the dashboard.
-- The backend is your own REST API now, not Base44.
