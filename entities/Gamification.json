@@ -1,0 +1,53 @@
+{
+  "name": "Gamification",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "xp": {
+      "type": "number",
+      "default": 0
+    },
+    "level": {
+      "type": "number",
+      "default": 1
+    },
+    "streak_days": {
+      "type": "number",
+      "default": 0
+    },
+    "last_activity_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "badges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "daily_challenge_completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "daily_challenge_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "total_content_completed": {
+      "type": "number",
+      "default": 0
+    },
+    "total_sessions": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}

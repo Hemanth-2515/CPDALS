@@ -1,0 +1,47 @@
+{
+  "name": "Feedback",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "content_id": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number",
+      "description": "1-5 star rating"
+    },
+    "difficulty_perceived": {
+      "type": "string",
+      "enum": [
+        "too_easy",
+        "just_right",
+        "too_hard"
+      ]
+    },
+    "pace_feedback": {
+      "type": "string",
+      "enum": [
+        "too_slow",
+        "just_right",
+        "too_fast"
+      ]
+    },
+    "content_helpful": {
+      "type": "boolean"
+    },
+    "comments": {
+      "type": "string"
+    },
+    "would_recommend": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}

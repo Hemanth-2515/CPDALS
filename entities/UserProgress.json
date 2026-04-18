@@ -1,0 +1,48 @@
+{
+  "name": "UserProgress",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "content_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "not_started",
+        "in_progress",
+        "completed",
+        "mastered"
+      ],
+      "default": "not_started"
+    },
+    "completion_percentage": {
+      "type": "number",
+      "default": 0
+    },
+    "time_spent_minutes": {
+      "type": "number",
+      "default": 0
+    },
+    "attempts": {
+      "type": "number",
+      "default": 0
+    },
+    "best_quiz_score": {
+      "type": "number"
+    },
+    "last_accessed": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_email",
+    "content_id"
+  ]
+}

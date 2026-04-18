@@ -1,0 +1,89 @@
+{
+  "name": "Content",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "video",
+        "text",
+        "quiz",
+        "interactive"
+      ],
+      "default": "text"
+    },
+    "difficulty_level": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "default": "beginner"
+    },
+    "category": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "estimated_duration": {
+      "type": "number",
+      "description": "Estimated time to complete in minutes"
+    },
+    "cognitive_load_rating": {
+      "type": "number",
+      "description": "How demanding this content is 1-10"
+    },
+    "content_body": {
+      "type": "string",
+      "description": "The actual content or URL"
+    },
+    "quiz_questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "correct_answer": {
+            "type": "number"
+          },
+          "explanation": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Content IDs that should be completed first"
+    },
+    "order_index": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "title",
+    "type"
+  ]
+}

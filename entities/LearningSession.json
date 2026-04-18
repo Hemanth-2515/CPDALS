@@ -1,0 +1,78 @@
+{
+  "name": "LearningSession",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of the learner"
+    },
+    "start_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "end_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "duration_minutes": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed",
+        "paused",
+        "abandoned"
+      ],
+      "default": "active"
+    },
+    "cognitive_load_avg": {
+      "type": "number",
+      "description": "Average cognitive load during session 0-100"
+    },
+    "attention_score": {
+      "type": "number",
+      "description": "Attention level during session 0-100"
+    },
+    "content_ids_covered": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "quiz_scores": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "quiz_id": {
+            "type": "string"
+          },
+          "score": {
+            "type": "number"
+          },
+          "time_taken": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "strategy_used": {
+      "type": "string",
+      "enum": [
+        "intensive",
+        "spaced",
+        "review",
+        "exploratory"
+      ],
+      "default": "spaced"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}
