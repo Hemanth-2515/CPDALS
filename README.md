@@ -35,7 +35,7 @@ You can also copy from `.env.example`.
 1. Open a terminal in:
 
 ```powershell
-cd "C:\Users\hemanth\OneDrive\Documents\New project\CPDALS"
+cd "Your Drive\New Project\CPDALS"
 ```
 
 2. Install packages:
